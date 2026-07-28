@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics & Systems Engineer Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-success: #4ade80;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 2rem 1rem; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 3rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-main); }
+        h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--accent); border-bottom: 1px solid var(--card-bg); padding-bottom: 0.5rem; }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; }
+        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid var(--accent); }
+        .card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .company { font-weight: bold; font-size: 1.2rem; color: var(--text-main); }
+        .date { color: var(--text-muted); font-size: 0.9rem; }
+        .title { color: var(--accent); font-weight: 500; font-size: 1rem; margin-bottom: 1rem; }
+        ul { list-style-type: none; }
+        li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main); font-size: 0.95rem; }
+        li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1-fraction)); gap: 1rem; }
+        .skill-cat { background: var(--card-bg); padding: 1rem; border-radius: 6px; }
+        .skill-cat h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        .tag.cert { background: rgba(74, 222, 128, 0.1); color: var(--accent-success); }
+        .footer { text-align: center; margin-top: 4rem; color: var(--text-muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">Electronics & Computer Engineering Graduate | Systems & DevOps Trainee</p>
+        </header>
+
+        <h2>Professional Experience</h2>
+        <div class="card">
+            <div class="card-header">
+                <span class="company">Flash Electronics</span>
+                <span class="date">6-Month Internship</span>
+            </div>
+            <div class="title">Engineering Intern (LabVIEW & Automation)</div>
+            <ul>
+                <li>Architected a relational cloud data infrastructure using Airtable to completely replace legacy Excel spreadsheets, mitigating multi-user sync lag.</li>
+                <li>Designed custom automated tables, field relationships, and verification rules that streamlined manufacturing data visibility.</li>
+                <li>Utilized NI LabVIEW to interface software architectures with industrial electronics hardware during verification testing configurations.</li>
+                <li>Collaborated across engineering teams to collect hardware sensor data metrics and route them into modern, central data pipelines.</li>
+            </ul>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="card" style="border-left-color: var(--accent-success);">
+            <div class="tags">
+                <span class="tag cert">AWS Certified Cloud Practitioner</span>
+                <span class="tag cert">Linux System Administration Certification</span>
+                <span class="tag cert">Cloud & DevOps with AI Systems (In Progress)</span>
+            </div>
+        </div>
+
+        <h2>Technical Toolkit</h2>
+        <div class="skills-grid">
+            <div class="skill-cat">
+                <h3>Hardware & Systems</h3>
+                <div class="tags">
+                    <span class="tag">NI LabVIEW</span>
+                    <span class="tag">Electronics Engineering</span>
+                    <span class="tag">Data Acquisition (DAQ)</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h3>Cloud & Infrastructure</h3>
+                <div class="tags">
+                    <span class="tag">AWS Cloud</span>
+                    <span class="tag">Linux Architecture</span>
+                    <span class="tag">DevOps Toolchains</span>
+                    <span class="tag">Airtable API</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated Portfolio Template for Google Application Review</p>
+        </div>
+    </div>
+</body>
+</html>
