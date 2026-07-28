@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aachal Palaspagar | Portfolio</title>
+    <style>
+        :root {
+            --bg: #030712;
+            --surface: #0f172a;
+            --surface-hover: #1e293b;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+            --border-hover: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 3rem 1.5rem;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; }
+
+        /* Premium Header Styling */
+        header {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, var(--surface), #0b0f19);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.7);
+        }
+        h1 { font-size: 2.75rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 0.5rem; background: linear-gradient(to right, #fff, var(--text-muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 1.15rem; color: var(--accent); font-weight: 500; margin-bottom: 1.5rem; }
+        .links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .links a:hover { border-color: var(--accent); background: var(--accent-glow); color: var(--accent); transform: translateY(-2px); }
+
+        /* Bento-style Layout Elements */
+        section { margin-bottom: 4rem; }
+        h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: 0 12px 20px -10px rgba(0,0,0,0.5); }
+        
+        /* Typography details */
+        .card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+        .role-title { font-size: 1.2rem; font-weight: 600; }
+        .company { color: var(--accent); font-weight: 500; }
+        .date { font-size: 0.85rem; color: var(--text-muted); font-family: monospace; }
+        
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.6rem; color: #cbd5e1; font-size: 0.95rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        
+        /* Grid design configuration badges */
+        .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .badge {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .badge.premium { background: var(--accent-glow); border-color: rgba(56, 189, 248, 0.4); color: var(--accent); }
+
+        /* Skill metrics dashboard look */
+        .skill-box { display: flex; flex-direction: column; gap: 1rem; }
+        .skill-item { background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: 12px; }
+        .skill-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+        .skill-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--accent); border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Aachal Palaspagar</h1>
+            <div class="subtitle">Electronics & Computer Engineer | Devops, Cloud & Infrastructure Specialist</div>
+            <div class="links">
+                <a href="mailto:aachal@example.com">📧 Email Me</a>
+                <a href="https://github.com/Palaspagar2004" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/in/Palaspagar" target="_blank">👔 LinkedIn</a>
+            </div>
+        </header>
+
+        <section id="experience">
+            <h2>💼 Industry Experience</h2>
+            <div class="card">
+                <div class="card-header">
+                    <span class="role-title"><span class="company">Flash Electronics</span> — Engineering Intern</span>
+                    <span class="date">6-Month Term</span>
+                </div>
+                <ul>
+                    <li>Engineered relational cloud data architectures inside Airtable to replace multi-user Excel workflows, accelerating automated production metrics collection.</li>
+                    <li>Designed hardware interfacing automation scripts utilizing NI LabVIEW graphical structures for industrial electronics component stress-testing pipelines.</li>
+                    <li>Collaborated cross-functionally to transition traditional validation workflows into modern database pipelines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>🏆 Professional Certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="role-title">AWS Infrastructure</div>
+                    <div class="date" style="margin: 0.25rem 0 0.75rem 0;">AWS Cloud Certification</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Expertise in EC2 hosting architectures, S3 cloud object storage management, IAM security boundaries, and VPC virtual networking rulesets.</p>
+                    <div class="badge-container"><span class="badge premium">Verified AWS Specialist</span></div>
+                </div>
+                <div class="card">
+                    <div class="role-title">Linux Core Systems</div>
+                    <div class="date" style="margin: 0.25rem 0 0.75rem 0;">System Administrator Certification</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Proficiency managing Linux kernel processes, disk partitioning hierarchies, bash shell script scheduling parameters, and permissions execution models.</p>
+                    <div class="badge-container"><span class="badge premium">Verified Linux Admin</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>🚀 Systems & AI Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="role-title">Smart Cloud Monitoring System</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">An AIOps automation pipeline that gathers real-time Linux infrastructure logs, streams data into AWS S3 storage buckets, and utilizes scripting hooks to catch anomalies.</p>
+                    <div class="badge-container">
+                        <span class="badge">AWS EC2</span>
+                        <span class="badge">Linux Administration</span>
+                        <span class="badge">AIOps Strategy</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="role-title">Relational Script Data Engine</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Migrated legacy file systems to relational API pipelines using programmatic Airtable configurations, successfully preventing concurrent synchronization blocks.</p>
+                    <div class="badge-container">
+                        <span class="badge">Airtable API</span>
+                        <span class="badge">Database Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>⚡ Technical Toolkit Mastery</h2>
+            <div class="grid">
+                <div class="skill-box">
+                    <div class="skill-item">
+                        <div class="skill-name">Linux Kernel Admin & Bash <span style="color:var(--accent);">90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">AWS Cloud Architecture <span style="color:var(--accent);">85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-item">
+                        <div class="skill-name">NI LabVIEW System Design <span style="color:var(--accent);">80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Airtable & Data Pipelines <span style="color:var(--accent);">82%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align:center; color:var(--text-muted); margin-top:2rem;">
+            <p>Built by Aachal Palaspagar — © " + new Date().getFullYear() + "</p>
+        </footer>
+    </div>
+
+</body>
+</html>
